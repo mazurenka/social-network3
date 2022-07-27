@@ -2,12 +2,10 @@ import React from "react";
 
 const Header = () => {
     return (
-        <div className="App">
-            <ul>
-                <li>css</li>
-                <li>js</li>
-                <li>html</li>
-            </ul>
+        <div>
+            <a href={'#s'}>Home</a> -
+            <a href={'#s'}>News Feed</a> -
+            <a href={'#s'}>Messages</a> -
         </div>
     );
 }
