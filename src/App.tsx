@@ -1,8 +1,5 @@
 import React from 'react';
 import './App.css';
-import Header from './Header';
-import Technologies from './Technologies';
-import Footer from "./Footer";
 
 const App = () => {
     return (
@@ -13,14 +10,42 @@ const App = () => {
             </header>
             <nav className={'nav'}>
                 <div>
-                    Profile
+                    <a>Profile</a>
                 </div>
                 <div>
-                    Messages
+                    <a>Messages </a>
+                </div>
+                <div>
+                    <a>News </a>
+                </div>
+                <div>
+                    <a>Music </a>
+                </div>
+                <div>
+                    <a>Settings </a>
                 </div>
             </nav>
             <div className={'content'}>
-                Main Content
+                <div>
+                    <img
+                        src={'https://images.ctfassets.net/hrltx12pl8hq/4plHDVeTkWuFMihxQnzBSb/aea2f06d675c3d710d095306e377382f/shutterstock_554314555_copy.jpg'}/>
+
+                </div>
+                <div>
+                    ava + description
+                </div>
+                <div>
+                    My posts
+                    <div>
+                        New Post
+                    </div>
+                    <div>
+                        pos 1
+                    </div>
+                    <div>
+                        pos 2
+                    </div>
+                </div>
             </div>
         </div>
     );
