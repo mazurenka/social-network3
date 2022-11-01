@@ -20,19 +20,25 @@ type MessagePropsType = {
 
 type DialogsPropsType = {
     name: string
-    id: string
+    id: number
 }
 
 export const Dialogs = () => {
+
+    let dialogsData = [
+        {id: 1, name: "Andrey"},
+        {id: 2, name: "Dimych"},
+        {id: 3, name: "Sveta"},
+        {id: 4, name: "Victor"},
+        {id: 5, name: "Valera"},
+        {id: 6, name: "Sasha"},
+    ]
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                <DialogItem name={'Andrey'} id={'1'}/>
-                <DialogItem name={'Dimych'} id={'2'}/>
-                <DialogItem name={'Sveta'} id={'3'}/>
-                <DialogItem name={'Victor'} id={'4'}/>
-                <DialogItem name={'Valera'} id={'5'}/>
-                <DialogItem name={'Sasha'} id={'6'}/>
+                <DialogItem name={dialogsData[0].name} id={dialogsData[0].id}/>
+                <DialogItem name={dialogsData[1].name} id={dialogsData[1].id}/>
             </div>
             <div className={s.messages}>
                 <Message message={'Hi'}/>
