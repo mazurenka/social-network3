@@ -9,7 +9,8 @@ type MyPostsPropsType = {
 export const MyPosts = (props: MyPostsPropsType) => {
     let postsElements = props.posts.map((p: PostType) => <Post id={p.id}
                                                                message={p.message}
-                                                               likesCount={p.likesCount}/>)
+                                                               likesCount={p.likesCount}
+    />)
 
     return (
         <div className={s.postsBlock}>

@@ -11,7 +11,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <React.StrictMode>
-        <App state={state}/>
+        <App
+            profilePage={state.profilePage}
+            dialogsPage={state.dialogsPage}
+            sidebar={state.sidebar}
+        />
     </React.StrictMode>
 );
 
