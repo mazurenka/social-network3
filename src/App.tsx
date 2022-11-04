@@ -14,7 +14,7 @@ type AppPropsType = {
     state: StateType
 }
 
-const App = (props: AppPropsType ) => {
+const App = (props: AppPropsType) => {
 
     return (
         <BrowserRouter>
@@ -24,9 +24,10 @@ const App = (props: AppPropsType ) => {
                 <div className={'app-wrapper-content'}>
                     <Routes>
                         <Route path="dialogs/*" element={<Dialogs
-                            dialogs={props.state.dialogs}
-                            messages={props.state.messages}/>}/>
-                        <Route path="profile/*" element={<Profile posts={props.state.posts}/>}/>
+                            dialogs={props.state.messagesPage.dialogs}
+                            messages={props.state.messagesPage.messages}/>}/>
+                        <Route path="profile/*" element={<Profile
+                            posts={props.state.profilePage.posts}/>}/>
                         <Route path="news/*" element={<News/>}/>
                         <Route path="music/*" element={<Music/>}/>
                         <Route path="settings/*" element={<Settings/>}/>

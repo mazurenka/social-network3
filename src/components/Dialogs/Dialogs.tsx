@@ -2,7 +2,7 @@ import s from './Dialogs.module.css'
 import {DialogItem, DialogsItemPropsType} from './DialogItem/DialogItem';
 import {Message, MessagePropsType} from "./Message/Message";
 
-type DialogsPropsType = {
+export type DialogsPropsType = {
     dialogs: Array<DialogsItemPropsType>
     messages: Array<MessagePropsType>
 }
