@@ -4,8 +4,11 @@ import {MyPosts} from "./MyPosts/MyPosts";
 import {ProfileInfo} from "./ProfileInfo/ProfileInfo";
 import {PostType} from "./MyPosts/Post/Post";
 
-export const Profile = (props: any) => {
+type ProfilePropsType = {
+    posts: Array<PostType>
+}
 
+export const Profile = (props: ProfilePropsType) => {
 
     return (
         <div className={s.content}>
