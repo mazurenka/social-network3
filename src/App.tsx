@@ -12,21 +12,19 @@ import {RootStateType, state} from "./redux/state";
 
 const App: React.FC<RootStateType> = (props) => {
     return (
-        <BrowserRouter>
-            <div className={'app-wrapper'}>
-                <Header/>
-                <Navbar/>
-                <div className={'app-wrapper-content'}>
-                    <Routes>
-                        <Route path="dialogs/*" element={<Dialogs state={state}/>}/>
-                        <Route path="profile/*" element={<Profile state={state}/>}/>
-                        <Route path="news/*" element={<News/>}/>
-                        <Route path="music/*" element={<Music/>}/>
-                        <Route path="settings/*" element={<Settings/>}/>
-                    </Routes>
-                </div>
+        <div className={'app-wrapper'}>
+            <Header/>
+            <Navbar/>
+            <div className={'app-wrapper-content'}>
+                <Routes>
+                    <Route path="dialogs/*" element={<Dialogs state={state}/>}/>
+                    <Route path="profile/*" element={<Profile state={state}/>}/>
+                    <Route path="news/*" element={<News/>}/>
+                    <Route path="music/*" element={<Music/>}/>
+                    <Route path="settings/*" element={<Settings/>}/>
+                </Routes>
             </div>
-        </BrowserRouter>
+        </div>
     );
 
 }
