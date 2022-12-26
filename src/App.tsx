@@ -8,9 +8,17 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {Music} from "./components/Music/Music";
 import {News} from "./components/News/News";
 import {Settings} from "./components/Settings/Settings";
-import {RootStateType, state} from "./redux/state";
+import {DialogsPageType, ProfilePageType, RootStateType, SidebarType, state} from "./redux/state";
 
-const App: React.FC<RootStateType> = (props) => {
+type RootStatePropsType = {
+    sidebar: SidebarType
+    dialogsPage: DialogsPageType
+    profilePage: ProfilePageType
+    state: RootStateType
+    addPost: (postMessage: string) => void
+}
+
+const App: React.FC<RootStatePropsType> = (props) => {
     return (
         <div className={'app-wrapper'}>
             <Header/>
@@ -18,7 +26,8 @@ const App: React.FC<RootStateType> = (props) => {
             <div className={'app-wrapper-content'}>
                 <Routes>
                     <Route path="dialogs/*" element={<Dialogs state={state}/>}/>
-                    <Route path="profile/*" element={<Profile state={state}/>}/>
+                    <Route path="profile/*" element={<Profile state={state}
+                                                              addPost={props.addPost}/>}/>
                     <Route path="news/*" element={<News/>}/>
                     <Route path="music/*" element={<Music/>}/>
                     <Route path="settings/*" element={<Settings/>}/>

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {state} from "./redux/state";
+import {addPost, state} from "./redux/state";
 import {BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(
@@ -14,9 +14,11 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             <App
+                state={state}
                 profilePage={state.profilePage}
                 dialogsPage={state.dialogsPage}
                 sidebar={state.sidebar}
+                addPost={addPost}
             />
         </BrowserRouter>
     </React.StrictMode>
