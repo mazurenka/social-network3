@@ -56,7 +56,7 @@ export let state: RootStateType = {
     sidebar: {}
 }
 
-export let addPost = (postMessage: string) => {
+export let addPost = (postMessage: string ) => {
     let newPost: PostType = {
         id: 5,
         message: postMessage,

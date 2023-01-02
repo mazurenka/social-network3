@@ -19,7 +19,14 @@ export const MyPosts = (props: MyPostsPropsType) => {
         if (newPostElement.current) {
             props.addPost(newPostElement.current.value)
         }
+
+        // @ts-ignore
+        newPostElement.current.value= ''
+        /*let text = newPostElement.current?.value
+        props.addPost(text)*/
+        //newPostElement.current.value = '';
     }
+
 
     return (
         <div className={s.postsBlock}>
