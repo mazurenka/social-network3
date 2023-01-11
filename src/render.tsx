@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {addPost, RootStateType} from "./redux/state";
+import {addPost, RootStateType, updateNewPostText} from "./redux/state";
 import {BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(
@@ -20,6 +20,8 @@ export let rerenderEntireTree = (state: RootStateType) => {
                     dialogsPage={state.dialogsPage}
                     sidebar={state.sidebar}
                     addPost={addPost}
+                    newPostText={state.profilePage.newPostText}
+                    updateNewPostText={updateNewPostText}
                 />
             </BrowserRouter>
         </React.StrictMode>
