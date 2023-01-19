@@ -67,7 +67,7 @@ export let addPost = () => {
         message: state.profilePage.newPostText,
         likesCount: 0
     }
-    state.profilePage.posts.push(newPost)
+    state.profilePage.posts.unshift(newPost)
     state.profilePage.newPostText = ""
     rerenderEntireTree(state)
 }
